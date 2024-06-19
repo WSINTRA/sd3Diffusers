@@ -1,13 +1,11 @@
 import torch
 from diffusers import StableDiffusion3Pipeline
-from transformers import T5EncoderModel
 from PIL import Image
 import sys
 
 def main(prompt, filename="sd3_hello_world.png", steps=25):
-    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers",torch_dtype=torch.float16)
-    pipe.to("mps")
-    pipe.enable_model_cpu_offload()
+    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers",torch_dtype=torch.float16).to("mps")
+
     image_data = pipe(
         prompt,
         negative_prompt="",
