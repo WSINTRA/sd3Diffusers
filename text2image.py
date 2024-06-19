@@ -4,7 +4,12 @@ from PIL import Image
 import sys
 
 def main(prompt, filename="sd3_hello_world.png", steps=25):
-    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers",torch_dtype=torch.float16).to("mps")
+    pipe = StableDiffusion3Pipeline.from_pretrained(
+        "stabilityai/stable-diffusion-3-medium-diffusers",
+        text_encoder_3=None,
+        tokenizer_3=None,
+        torch_dtype=torch.float16
+        ).to("mps")
 
     image_data = pipe(
         prompt,
