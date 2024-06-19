@@ -1,6 +1,5 @@
 import torch
 from diffusers import StableDiffusion3Pipeline
-from PIL import Image
 import sys
 
 def main(prompt, filename="sd3_hello_world.png", steps=25):
