@@ -7,7 +7,7 @@ import sys
 def main(prompt, filename="sd3_hello_world.png", steps=25):
     pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers",torch_dtype=torch.float16)
     pipe.to("mps")
-
+    pipe.enable_model_cpu_offload()
     image_data = pipe(
         prompt,
         negative_prompt="",
