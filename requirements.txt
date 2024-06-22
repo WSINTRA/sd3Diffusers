@@ -4,7 +4,7 @@ charset-normalizer==3.3.2
 contourpy==1.2.1
 cv==1.0.0
 cycler==0.12.1
-diffusers==0.29.0
+diffusers @ git+https://github.com/huggingface/diffusers@25d7bb3ea65bb6f79056252584e24eb545c5eb18
 filelock==3.13.1
 fonttools==4.53.0
 fsspec==2024.2.0
@@ -21,6 +21,7 @@ numpy==1.26.3
 opencv-python==4.10.0.84
 packaging==24.1
 pillow==10.2.0
+protobuf==5.27.1
 psutil==6.0.0
 pyparsing==3.1.2
 python-dateutil==2.9.0.post0
@@ -28,6 +29,7 @@ PyYAML==6.0.1
 regex==2024.5.15
 requests==2.32.3
 safetensors==0.4.3
+sentencepiece==0.2.0
 six==1.16.0
 sympy==1.12
 tokenizers==0.19.1
